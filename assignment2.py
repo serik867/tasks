@@ -162,3 +162,62 @@ for i in _input:
 
 print(" Letter: ", _letter_count, " and Digits:", _digit_count)
 
+# 9. Read the two parts of the question below: 
+# 9.1 Write a program such that it asks users to “guess the lucky number”. 
+# If the correct number is guessed the program stops, otherwise it continues forever. 
+# 9.2 Modify the program so that it asks users whether they want to guess again each time. 
+# Use two variables, ‘number’ for the number and ‘answer’ for the answer to the question 
+# whether they want to continue guessing. The program stops if the user guesses the correct 
+# number or answers “no”. ( The program continues as long as a user has not answered “no” and 
+# has not guessed the correct number)
+
+import random
+
+def guess_number():
+    _number=random.randint(0,20)
+    print(_number)
+
+    while True:
+        _answer=input("Guess the lucky number-Enter number between 0 to 20:")
+        if _answer.isdigit and int(_answer)==_number:
+            print(" Congratulation!!! You find the number")
+            break
+        elif _answer.isdigit and int(_answer)!=_number:
+            _answer = input("No rigth! like to play again: Yes/No: ")
+            if _answer.capitalize()=="Yes":
+                continue
+            elif _answer.capitalize()=="No":
+                break
+            else:
+                print("Sorry do not caght it!!")
+                continue
+        else:
+            break
+
+guess_number()       
+
+#10 and 11. Write a program that asks five times to guess the lucky number. 
+# Use a while loop and a counter, such as
+
+def five_guess():
+
+    _count = 1
+    _number=random.randint(0,20)
+    print("random number:", _number)
+
+    while _count <= 5:
+        _answer=int(input("Guess the lucky number-Enter number between 0 to 20:"))
+        _count+=1
+        print("guess count",_count)
+        if _answer==_number:
+            print("Good Guess")
+            break
+        elif _answer != _number and _count!=6:
+            print("Try again")
+        else:
+            print("Sorry but that was not very successful. It's over!!!")
+
+
+print("Here starts five_guess------ ")
+
+five_guess()
