@@ -7,15 +7,18 @@ _int1 = 14
 _float1 = 14.5
 _string1 = "Assignment1"
 
+int1,float1,string1= 14,14.5,"Assignment1"
+print(int1,float1,string1)
+
 #2.Create a variable of value type complex and swap it with another variable whose value is an integer.
 
 _complx = 5+2j
 _int2 =7
-#print(_complx,_int2)
+print(_complx,_int2)
 
 _int2, _complx = int(_complx.real),complex(_int2,_complx.imag)
 
-#print(_complx,_int2)
+print(_complx,_int2)
 
 #3.Swap two numbers using third variable as result name and do the same task without using any third variable.
 
@@ -47,9 +50,9 @@ k,l=l,k
 
 #5.Write a program to complete the task given below:
 #5.1 Ask user to enter any 2 numbers in between 1-10 and add both of them to another variable  call z.
-_number1= input("Enter first number between 1-10: ")
-_number2 = input("Enter second number between 1-10: ")
-z=int(_number1) + int(_number2)
+_number1= int(input("Enter first number between 1-10: "))
+_number2 = int(input("Enter second number between 1-10: "))
+z=_number1 + _number2
 #print(z)
 
 #5.2 Use z for adding 30 into it and print the final result by using variable result.
@@ -62,7 +65,7 @@ print(type(input("Enter number: ")))
 #7.Create Variable using CamelCase, LadderCase and UPPERCASE.
 FirstVar="Hello World"
 secondVar="Hello World"
-third_var="Hello World"
+THIRD_VAR="Hello World"
 
 #8.Yes it is Change because "a" reference different place in memory, different data type (also class type)
 a=12
