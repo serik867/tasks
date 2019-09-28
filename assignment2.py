@@ -118,6 +118,7 @@ def check_output():
     for i in range(100,x,2):
    	    print("First output: ", i)
 
+#6.2 FIXED ONE
     i = 0
     while i < 5:
         print(i)
@@ -127,6 +128,22 @@ def check_output():
         else:
             print("Second output:","error")
 
+
+#6.2 HAVE ERRORS:
+
+    """
+    i = 0
+    while i < 5:
+        print(i)
+        i += 1
+        if i == 3:
+            break
+    else:
+        print(“error”)
+
+    """
+
+#6.3 FIXED 
     count = 0
     while True:
         print("Third output",count)
@@ -134,7 +151,32 @@ def check_output():
         if count >= 5:
             break
 
+#6.3 HAVE ERROR
+
+"""
+
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        Break
+
+"""
+
 check_output()
+#abive check code, fix errors, however answer for question no:6 is below:---->
+# Answers for question: 6.1 :TypeError: 'int' object is not iterable
+# 6.2 AS I SEE THERE IS TWO ERROR: 6.2.1   
+#   print(“error”)
+#               ^
+#SyntaxError: invalid character in identifier
+#6.2.2 INDENTATION ERRROR: ELSE BLOCK HAVE TO INDENTED
+#
+#6.3 NameError: name 'Break' is not defined
+
+
+
 
 #7. Write a program that prints all the numbers from 0 to 6 except 3 and 6.
 #  Expected output: 0 1 2 4 5
