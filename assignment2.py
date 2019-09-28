@@ -114,11 +114,17 @@ print(_list)
 #6.What is the output of the following code examples?
 
 def check_output():
+#6.1 FIXED ONE
     x=123 
     for i in range(100,x,2):
    	    print("First output: ", i)
+#6.1 ERROR
+#   x=123 
+#   for i in x:
+#       print(i)
 
 #6.2 FIXED ONE
+
     i = 0
     while i < 5:
         print(i)
@@ -165,6 +171,7 @@ while True:
 """
 
 check_output()
+
 #abive check code, fix errors, however answer for question no:6 is below:---->
 # Answers for question: 6.1 :TypeError: 'int' object is not iterable
 # 6.2 AS I SEE THERE IS TWO ERROR: 6.2.1   
