@@ -61,14 +61,21 @@ ________   _   ______             _________   ______    ______             _____
         print  "-- -- -- -- -- -- "
     
     show(Board)
-    
+ 
+
+
     def CHOOSE_PLAYER(Board):   #FUNCTION ALLOW THE PLAYER(HUMAN) TO CHOOSE THEIR SPOT ON THE BOARD
         valid_move=False
+        
+        
         try:
             while(not valid_move):
                 select=int(raw_input("PLEASE SELECT YOUR CHOICE TO MAKE A MOVE BETWEEN 0 To 8 :\n>"))
                 if (Board[select]!='X' and Board[select]!='O'):
-                    Board[select]='X'
+                    if user_select=='X':
+                        Board[select]='X'
+                    else:
+                        Board[select]='O'
                     valid_move=True
                 else:
                     print("SORRY THE POSITION ON THE BOARD HAS ALREADY BEEN TAKEN!! TRY OTHER")
@@ -83,12 +90,16 @@ ________   _   ______             _________   ______    ______             _____
     import random	
     def CHOOSE_COMPUTER(Board):                  #FUNCTION ALLOW THE COMPUTER(AI) TO CHOOSE THEIR SPOT RANDOMLY
         valid_move=False
+       
         while(not valid_move):
         
             random.seed()
             select=random.randint(0,8)
             if (Board[select]!="X" and Board[select]!="O"):
-                Board[select]="O"
+                if user_select=="X":
+                     Board[select]="O"
+                else:
+                    Board[select]="X"
                 print("COMPUTER MADE A MOVE:")
                 valid_move=True
                 
@@ -121,6 +132,7 @@ ________   _   ______             _________   ______    ______             _____
             winner=True
         return winner
     
+  
     
     #MAIN BODY OF THE PROGRAM
     Board=[0,1,2,
@@ -130,8 +142,10 @@ ________   _   ______             _________   ______    ______             _____
     turn=0
     FIRST=raw_input("DO YOU WANT TO START THE GAME FIRST:(Y/N) \n>")
     if FIRST=="Y":
-        print "**GREAT YOU ARE THE FIRST PLAYER AND YOU ARE PLAYING WITH Xs**:"
+        user_select=raw_input("Select symbol type 'X' or 'O' letter:  ")
+        print "**GREAT YOU ARE THE FIRST PLAYER AND YOU ARE PLAYING WITH '{}'s**:".format(user_select)
     elif FIRST=="N":
+        
         print "AS YOU CHOOSE COMPUTER WILL START FIRST AND GOING TO PLAY WITH Os:"
     
 
