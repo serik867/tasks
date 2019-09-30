@@ -93,43 +93,63 @@ def main():	              #MAIN LOOP OF THE PROGRAM
 				valid_move=True
 				
 		return WIN_CHECK(Board)
-	
-	def WIN_HORIZONTAL(Board):             #CHANCES WINNER IN HORIZONTAL MOVE
-		winner=False
+        
+	def WIN(Board):
+        winner=False
 		if (Board[0]==Board[1]==Board[2]):
 			winner=True
 		elif (Board[3]==Board[4]==Board[5]):
 			winner=True
 		elif (Board[6]==Board[7]==Board[8]):
 			winner=True
-		return winner
-	
-	def WIN_VERTICAL(Board):               #CHANCES WINNER IN VERTICAL MOVE 
-		winner=False
-		if (Board[0]==Board[3]==Board[6]):
+        elif (Board[0]==Board[3]==Board[6]):
 			winner=True
 		elif (Board[1]==Board[4]==Board[7]):
 			winner=True
 		elif (Board[2]==Board[5]==Board[8]):
 			winner=True
-		return winner
-	
-	def WIN_DIAGONAL(Board):               #CHANCES WINNER IN DIAGONAL MOVE
-		winner=False
-		if (Board[0]==Board[4]==Board[8]):
+		elif (Board[0]==Board[4]==Board[8]):
 			winner=True
 		elif (Board[2]==Board[4]==Board[6]):
 			winner=True
 		return winner
+
+	# def WIN_HORIZONTAL(Board):             #CHANCES WINNER IN HORIZONTAL MOVE
+	# 	winner=False
+	# 	if (Board[0]==Board[1]==Board[2]):
+	# 		winner=True
+	# 	elif (Board[3]==Board[4]==Board[5]):
+	# 		winner=True
+	# 	elif (Board[6]==Board[7]==Board[8]):
+	# 		winner=True
+	# 	return winner
+	
+	# def WIN_VERTICAL(Board):               #CHANCES WINNER IN VERTICAL MOVE 
+	# 	winner=False
+	# 	if (Board[0]==Board[3]==Board[6]):
+	# 		winner=True
+	# 	elif (Board[1]==Board[4]==Board[7]):
+	# 		winner=True
+	# 	elif (Board[2]==Board[5]==Board[8]):
+	# 		winner=True
+	# 	return winner
+	
+	# def WIN_DIAGONAL(Board):               #CHANCES WINNER IN DIAGONAL MOVE
+	# 	winner=False
+	# 	if (Board[0]==Board[4]==Board[8]):
+	# 		winner=True
+	# 	elif (Board[2]==Board[4]==Board[6]):
+	# 		winner=True
+	# 	return winner
 	
 	def WIN_CHECK(Board):                  #CHECKING WINNER 
 		GAME_WINNER=False
-		if (WIN_HORIZONTAL(Board)==True):
+		if (WIN(Board)==True):
 			GAME_WINNER=True
-		elif (WIN_VERTICAL(Board)==True):
-			GAME_WINNER=True
-		elif (WIN_DIAGONAL(Board)==True):
-			GAME_WINNER=True
+		# elif (WIN_VERTICAL(Board)==True):
+		# 	GAME_WINNER=True
+		# elif (WIN_DIAGONAL(Board)==True):
+		# 	GAME_WINNER=True
 		return GAME_WINNER
 	
 	
