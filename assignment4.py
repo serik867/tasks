@@ -42,11 +42,54 @@ for k,v in zip(student,capital):
 print(dict1)
 # 5.Learn More about Yield, next and Generators
 
-# 6.Write a program in Python using generators to reverse the string. Input String = “Consultadd Training”
+###############################################################################
+#Python generators are a simple way of creating iterators. 
+# All the overhead we mentioned above are automatically handled 
+# by generators in Python.
+
+#Simply speaking, a generator is a function that returns an object (iterator) 
+# which we can iterate over (one value at a time).
+
+#It is fairly simple to create a generator in Python. 
+# It is as easy as defining a normal function with yield statement 
+# instead of a return statement.
+###############################################################################
+
+# 6.Write a program in Python using generators to reverse the string. 
+# Input String = “Consultadd Training”
+def reverse_str(_str):
+    for i in _str[::-1]:
+        yield i
+
+for char in reverse_str("Consultadd Training"):
+    print(char)
 
 # 7.Write any example on decorators.
 
+def decorate_func(func):
+    def wrap_func(*args,**kwargs):
+        return func(*args,**kwargs)
+    return wrap_func
+
+@decorate_func
+def divisible_num(num1,num2):
+    if num1%num2==0:
+        print( "{} is divisible by {}".format(num1,num2))
+        return "From divisible_num"
+    else:
+        print( "{} is not divisible by {}".format(num1,num2))
+    
+print(divisible_num(40,10))
+
 # 8.Learn about What is FRONT END and its Technologies and Tools
+     # HTML, CSS, Javascript and JQuery,Angular.js,Boostrap,Vue.js
+     # Front end is all about development of user interface design and interaction
 
 # Make sure to mention at least 5 top notch technologies of Frontend.
 # Also mentioned the name of companies using those 5 technologies individually
+#   Microsoft, Netflix, paypal,Apple, AT&T
+
+
+
+
+
