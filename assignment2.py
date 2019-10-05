@@ -174,7 +174,8 @@ check_output()
 
 #abive check code, fix errors, however answer for question no:6 is below:---->
 # Answers for question: 6.1 :TypeError: 'int' object is not iterable
-# 6.2 AS I SEE THERE IS TWO ERROR: 6.2.1   
+# 6.2 AS I SEE THERE IS TWO ERROR: 
+# 6.2.1   
 #   print(“error”)
 #               ^
 #SyntaxError: invalid character in identifier
