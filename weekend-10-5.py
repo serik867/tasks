@@ -38,20 +38,72 @@ print("Deserialized dictionary:", dict_obj )
 # 3.Write a Program In Python to explain Multithreading in Python.
 
 
-
-
 # 4.What are the Collection in Python. Explain following terms with Example.
-# namedtuple()
-# Counter
-# OrderedDict
-# ChainMap
-# deque
+        #Collections in Python are containers that are used to store collections of data, 
+        # for example, list, dict, set, tuple etc. These are built-in collections.
+        # Several modules have been developed that provide additional data structures to store collections of data. 
+        # One such module is the Python collections module.
+
+#4.1 namedtuple()
+        #Python supports a type of container like dictionaries called “namedtuples()” present in module, “collection“. 
+        #Like dictionaries they contain keys that are hashed to a particular value. But on contrary,
+        #it supports both access from key value and iteration, 
+        #the functionality that dictionaries lack.
+
+#4.2 Counter()
+
+#A counter tool is provided to support convenient and rapid tallies. For example:
+
+from collections import Counter
+cnt = Counter()
+for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
+        cnt[word] += 1
+print(cnt)
+
+
+
+#4.3 OrderedDict
+
+#An OrderedDict is a dictionary subclass that remembers the order in which its contents are added.
+#import collections 
+#from collections import OrederedDict
+#An OrderedDict is a dictionary subclass that remembers the order that keys were first inserted. 
+# The only difference between dict() and OrderedDict() is that:
+#OrderedDict preserves the order in which the keys are inserted. 
+#A regular dict doesn’t track the insertion order, and iterating it gives the values in an arbitrary order.
+#By contrast, the order the items are inserted is remembered by OrderedDict.
+
+#4.4 ChainMap
+
+#ChainMap is used to combine several dictionaries or mappings. It returns a list of dictionaries.
+from collections import ChainMap
+dict1 = { 'a' : 1, 'b' : 2 }
+dict2 = { 'c' : 3, 'b' : 4 }
+chain_map = ChainMap(dict1, dict2)
+print(chain_map.maps)
+
+#4.5 deque
+#The deque is a list optimized for inserting and removing items.
+from collections import deque
+list = ["a","b","c"]
+deq = deque(list)
+print(deq)
+deq.append("d")
+deq.appendleft("e")
+print(deq)
+c="abcabcacbadscd"
+print(deque(c))
 
 # NOTE: Make sure to write at least one program on each and comment what each line of the code is doing.
+
 # 5. 	Learn about PEP8 - How to write beautiful Python Code?
 # 6. 	Difference between the pip, virtualenv, conda?
- 
 
+#In short, pip is a general-purpose manager for Python packages; 
+# conda is a language-agnostic cross-platform environment manager. 
+# For the user, the most salient distinction is probably this: 
+# pip installs python packages within any environment; 
+# conda installs any package within conda environments
 
 
 ####################WEEKEND ACTIVITY- GITHUB TASK####################################################
